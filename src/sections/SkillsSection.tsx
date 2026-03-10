@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import CircleAnimation from "../components/CircleAnimation";
-
 const skills = [
   "Product-minded engineering",
   "Distributed systems",
@@ -11,21 +8,9 @@ const skills = [
 ];
 
 function SkillsSection() {
-  const [pulseId, setPulseId] = useState(0);
-  const [pulseActive, setPulseActive] = useState(false);
-
-  useEffect(() => {
-    setPulseId((prev) => prev + 1);
-    setPulseActive(true);
-  }, []);
 
   return (
     <section className="relative w-full space-y-8 overflow-hidden">
-      {/* <CircleAnimation
-        activationId={pulseId}
-        isActive={pulseActive}
-        onComplete={() => setPulseActive(false)}
-      /> */}
       <div className="flex items-center justify-between">
         <h2 className="font-display text-2xl text-slate-900">Skills</h2>
         <span className="text-sm text-slate-500">Toolkit focus</span>

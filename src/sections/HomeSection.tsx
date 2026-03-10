@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import AutoSlider from "../components/AutoSlider";
-import TechSlider from "../components/TechSlider";
 
 const assetSvgs = import.meta.glob("../assets/*.svg", {
   eager: true,
@@ -137,223 +135,115 @@ function DeveloperAtDeskIllustration() {
 
 function HomeSection() {
   return (
-    // <section className="relative grid w-full items-center gap-8 overflow-hidden sm:gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)] lg:gap-12">
-    //   <div className="space-y-5 sm:space-y-6 order-first">
-    //     <p className="inline-flex w-fit items-center gap-2 rounded-full border border-line bg-white/70 px-4 py-2 text-[0.65rem] font-extrabold uppercase tracking-[0.3em] text-muted sm:text-xs">
-    //       Software engineer
-    //     </p>
-
-    //     <p className="max-w-xl text-base leading-7 text-muted sm:text-lg">
-    //       I build reliable, high-performance web applications that solve real
-    //       problems and deliver measurable value.
-    //     </p>
-    //     <p className="max-w-xl text-base leading-7 text-muted sm:text-lg">
-    //       I am passionate about creating seamless user experiences and writing
-    //       clean, maintainable code. With a focus on continuous learning and
-    //       improvement, I stay up-to-date with the latest technologies and best
-    //       practices in the industry.
-    //     </p>
-    //     <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-    //       <Link
-    //         className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 sm:w-auto sm:px-6 sm:py-3"
-    //         to="/projects"
-    //       >
-    //         View projects
-    //       </Link>
-    //       <Link
-    //         className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink sm:w-auto sm:px-6 sm:py-3"
-    //         to="/contact"
-    //       >
-    //         Contact
-    //       </Link>
-    //       <a
-    //         className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink sm:w-auto sm:px-6 sm:py-3"
-    //         href="/resume.pdf"
-    //         target="_blank"
-    //         rel="noreferrer"
-    //       >
-    //         View Resume
-    //       </a>
-    //     </div>
-
-    //     <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-    //       {socialLinks.map((link) => (
-    //         <a
-    //           key={link.label}
-    //           href={link.href}
-    //           aria-label={link.label}
-    //           className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition hover:border-slate-900 hover:text-slate-900 sm:h-10 sm:w-10"
-    //           target="_blank"
-    //           rel="noreferrer"
-    //         >
-    //           {link.icon}
-    //         </a>
-    //       ))}
-    //     </div>
-    //   </div>
-    //   <div className="panel-surface order-first rounded-3xl p-5 sm:p-8 md:order-none">
-    //     <div className="mx-auto max-w-[260px] sm:max-w-[360px] lg:max-w-[420px]">
-    //       <DeveloperAtDeskIllustration />
-    //     </div>
-    //   </div>
-    //   <div className="space-y-4 md:col-span-2">
-    //     <p className="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-muted sm:text-xs">
-    //       Experts programming and tools
-    //     </p>
-    //     <div
-    //       className="marquee"
-    //       aria-label="Programming tools and technologies"
-    //     >
-    //       <div className="marquee-track" role="list">
-    //         {toolLogos.map((tool) => (
-    //           <div
-    //             className="marquee-item"
-    //             role="listitem"
-    //             key={`tool-${tool.label}`}
-    //           >
-    //             <img className="marquee-logo" src={tool.src} alt="" />
-    //             {tool.label}
-    //           </div>
-    //         ))}
-    //         {toolLogos.map((tool) => (
-    //           <div
-    //             aria-hidden="true"
-    //             className="marquee-item"
-    //             key={`tool-dup-${tool.label}`}
-    //           >
-    //             <img className="marquee-logo" src={tool.src} alt="" />
-    //             {tool.label}
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
     <section className="relative w-full overflow-hidden py-10">
-  <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-14">
+      <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-14">
+        {/* LEFT CONTENT */}
+        <div className="space-y-6">
+          <p className="inline-flex w-fit items-center rounded-full border border-line bg-white/70 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.3em] text-muted sm:text-xs">
+            Software Engineer
+          </p>
 
-    {/* LEFT CONTENT */}
-    <div className="space-y-6">
+          <p className="max-w-xl text-base leading-7 text-muted sm:text-lg">
+            I build reliable, high-performance web applications that solve real
+            problems and deliver measurable value.
+          </p>
 
-      <p className="inline-flex w-fit items-center rounded-full border border-line bg-white/70 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.3em] text-muted sm:text-xs">
-        Software Engineer
-      </p>
+          <p className="max-w-xl text-base leading-7 text-muted sm:text-lg">
+            I am passionate about creating seamless user experiences and writing
+            clean, maintainable code. With a focus on continuous learning and
+            improvement, I stay up-to-date with the latest technologies.
+          </p>
 
-      <p className="max-w-xl text-base leading-7 text-muted sm:text-lg">
-        I build reliable, high-performance web applications that solve real
-        problems and deliver measurable value.
-      </p>
+          {/* BUTTONS */}
+          <div className="flex flex-wrap gap-3">
+            <Link
+              to="/projects"
+              className="flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 hover:bg-slate-800"
+            >
+              View Projects
+            </Link>
 
-      <p className="max-w-xl text-base leading-7 text-muted sm:text-lg">
-        I am passionate about creating seamless user experiences and writing
-        clean, maintainable code. With a focus on continuous learning and
-        improvement, I stay up-to-date with the latest technologies.
-      </p>
+            <Link
+              to="/contact"
+              className="flex items-center justify-center rounded-full border border-line px-6 py-3 text-sm font-semibold text-ink hover:border-slate-900"
+            >
+              Contact
+            </Link>
 
-      {/* BUTTONS */}
-      <div className="flex flex-wrap gap-3">
-
-        <Link
-          to="/projects"
-          className="flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 hover:bg-slate-800"
-        >
-          View Projects
-        </Link>
-
-        <Link
-          to="/contact"
-          className="flex items-center justify-center rounded-full border border-line px-6 py-3 text-sm font-semibold text-ink hover:border-slate-900"
-        >
-          Contact
-        </Link>
-
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center justify-center rounded-full border border-line px-6 py-3 text-sm font-semibold text-ink hover:border-slate-900"
-        >
-          View Resume
-        </a>
-
-      </div>
-
-      {/* SOCIAL ICONS */}
-      <div className="flex flex-wrap gap-3">
-        {socialLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            aria-label={link.label}
-            target="_blank"
-            rel="noreferrer"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-muted transition hover:border-slate-900 hover:text-slate-900"
-          >
-            {link.icon}
-          </a>
-        ))}
-      </div>
-
-    </div>
-
-
-    {/* RIGHT ILLUSTRATION */}
-    <div className="flex justify-center">
-      <div className="panel-surface w-full max-w-sm rounded-3xl p-6 sm:max-w-md lg:max-w-lg">
-        <DeveloperAtDeskIllustration />
-      </div>
-    </div>
-
-  </div>
-
-
-  {/* TOOLS MARQUEE */}
-  <div className="space-y-4">
-
-    <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-muted sm:text-xs">
-      Programming Tools
-    </p>
-
-    <div className="marquee w-full overflow-hidden" aria-label="Programming tools">
-
-      <div className="marquee-track flex gap-8">
-
-        {toolLogos.map((tool) => (
-          <div
-            key={`tool-${tool.label}`}
-            className="marquee-item flex items-center gap-2 whitespace-nowrap text-sm"
-          >
-            <img
-              src={tool.src}
-              alt={tool.label}
-              className="h-6 w-6 object-contain"
-            />
-            {tool.label}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center rounded-full border border-line px-6 py-3 text-sm font-semibold text-ink hover:border-slate-900"
+            >
+              View Resume
+            </a>
           </div>
-        ))}
 
-        {toolLogos.map((tool) => (
-          <div
-            key={`tool-dup-${tool.label}`}
-            aria-hidden="true"
-            className="marquee-item flex items-center gap-2 whitespace-nowrap text-sm"
-          >
-            <img
-              src={tool.src}
-              alt=""
-              className="h-6 w-6 object-contain"
-            />
-            {tool.label}
+          {/* SOCIAL ICONS */}
+          <div className="flex flex-wrap gap-3">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                aria-label={link.label}
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-muted transition hover:border-slate-900 hover:text-slate-900"
+              >
+                {link.icon}
+              </a>
+            ))}
           </div>
-        ))}
+        </div>
 
+        {/* RIGHT ILLUSTRATION */}
+        <div className="flex justify-center">
+          <div className="panel-surface w-full max-w-sm rounded-3xl p-6 sm:max-w-md lg:max-w-lg">
+            <DeveloperAtDeskIllustration />
+          </div>
+        </div>
       </div>
 
-    </div>
+      {/* TOOLS MARQUEE */}
+      <div className="space-y-4">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-muted sm:text-xs">
+          Programming Tools
+        </p>
 
-  </div>
-</section>
+        <div
+          className="marquee w-full overflow-hidden"
+          aria-label="Programming tools"
+        >
+          <div className="marquee-track flex gap-8">
+            {toolLogos.map((tool) => (
+              <div
+                key={`tool-${tool.label}`}
+                className="marquee-item flex items-center gap-2 whitespace-nowrap text-sm"
+              >
+                <img
+                  src={tool.src}
+                  alt={tool.label}
+                  className="h-6 w-6 object-contain"
+                />
+                {tool.label}
+              </div>
+            ))}
 
+            {toolLogos.map((tool) => (
+              <div
+                key={`tool-dup-${tool.label}`}
+                aria-hidden="true"
+                className="marquee-item flex items-center gap-2 whitespace-nowrap text-sm"
+              >
+                <img src={tool.src} alt="" className="h-6 w-6 object-contain" />
+                {tool.label}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

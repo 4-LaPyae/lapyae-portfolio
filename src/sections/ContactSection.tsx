@@ -1,22 +1,7 @@
-import { useEffect, useState } from "react";
-import CircleAnimation from "../components/CircleAnimation";
-
 function ContactSection() {
-  const [pulseId, setPulseId] = useState(0);
-  const [pulseActive, setPulseActive] = useState(false);
-
-  useEffect(() => {
-    setPulseId((prev) => prev + 1);
-    setPulseActive(true);
-  }, []);
 
   return (
     <section className="relative w-full overflow-hidden rounded-3xl border border-slate-200 bg-white/80 p-10 text-center shadow-xl shadow-slate-200/60">
-      {/* <CircleAnimation
-        activationId={pulseId}
-        isActive={pulseActive}
-        onComplete={() => setPulseActive(false)}
-      /> */}
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
         Contact
       </p>

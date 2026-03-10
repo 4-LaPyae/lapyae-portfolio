@@ -1,22 +1,7 @@
-import { useEffect, useState } from "react";
-import CircleAnimation from "../components/CircleAnimation";
-
 function AboutSection() {
-  const [pulseId, setPulseId] = useState(0);
-  const [pulseActive, setPulseActive] = useState(false);
-
-  useEffect(() => {
-    setPulseId((prev) => prev + 1);
-    setPulseActive(true);
-  }, []);
 
   return (
     <section className="relative grid w-full gap-8 overflow-hidden md:grid-cols-[0.5fr_1fr]">
-      {/* <CircleAnimation
-        activationId={pulseId}
-        isActive={pulseActive}
-        onComplete={() => setPulseActive(false)}
-      /> */}
       <p className="font-display text-sm uppercase tracking-[0.35em] text-slate-500">
         About
       </p>
